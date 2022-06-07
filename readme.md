@@ -24,20 +24,20 @@ There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
 
 ---
 
-# unicorn-fun
+# ked
 
 > My awesome module
 
 ## Install
 
 ```sh
-npm install unicorn-fun
+npm install ked
 ```
 
 ## Usage
 
 ```js
-import unicornFun from 'unicorn-fun';
+import unicornFun from 'ked';
 
 unicornFun('unicorns');
 //=> 'unicorns & rainbows'
