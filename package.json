@@ -15,7 +15,12 @@
 		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava",
+		"release": "np",
+		"build": "del-cli dist && tsc",
+		"prepare": "npm run build",
+		"format": "xo --fix",
+		"upgrade": "npm-check-updates --doctor -u"
 	},
 	"files": [
 		"index.js"
@@ -28,10 +33,24 @@
 		"compiler",
 		"interpreter"
 	],
-	"dependencies": {},
+	"ava": {
+		"extensions": {
+			"js": true,
+			"ts": "module"
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm",
+			"--experimental-specifier-resolution=node"
+		]
+	},
 	"devDependencies": {
-		"@sindresorhus/tsconfig": "3.0.1",
-		"ava": "^3.15.0",
+		"@sindresorhus/tsconfig": "2.0.0",
+		"ava": "4.3.0",
+		"del-cli": "4.0.1",
+		"np": "7.6.1",
+		"npm-check-updates": "13.1.1",
+		"ts-node": "10.8.1",
+		"typescript": "4.7.3",
 		"xo": "^0.46.3"
 	}
 }
