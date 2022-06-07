@@ -30,6 +30,7 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
+		"@sindresorhus/tsconfig": "3.0.1",
 		"ava": "^3.15.0",
 		"xo": "^0.46.3"
 	}
